@@ -4,14 +4,16 @@
 const numbers = [1, 60, 112, 123, 100, 99, 73, 35];
 
 const evenNumbers = (arr) => {
-   //your code here...
+   if(arr % 2 !== 0 && arr < 100) return true
+   
 }
 
-let myEvenNumbers = evenNumbers(numbers)
-console.log(myEvenNumbers) // [1,99,73,35]
+let myEvenNumbers = numbers.filter(evenNumbers)
+console.log(myEvenNumbers) // [1,99,73,35]   // CORRECT
 
 // Exercise 2: From the given array of people, get the people who are allowed to consume alcoholic beverages (i.e age > 21).
-const people = [
+
+/* const people = [
   { name: "Candice", age: 25 },
   { name: "Tammy", age: 30 },
   { name: "Allen", age: 49 },
@@ -20,16 +22,16 @@ const people = [
   { name: "Bill", age: 19 }
 ];
 
-const adults = (arr) => {
-   //your code here...
+const adults = (people) => {
+  return people.age > 21
 }
 
-let canConsume = adults(people)
+let canConsume = people.filter(adults)
 console.log(canConsume) 
 
 /* Answer should be 
 [
-  { name: "Candice", age: 25 },
+  { name: "Candice", age: 25 }, // CORRECT
   { name: "Tammy", age: 30 },
   { name: "Allen", age: 49 },
 ]
@@ -38,6 +40,7 @@ console.log(canConsume)
 // Bonus: Using the same array above Just return the first two names of people eligible to drink. (i.e age > 21).
 // might need to use a .map() here later at some point
 // might also need to use another array method here which we haven't seen. Google it!, Again its a "MIGHT"
+
 const people = [
   { name: "Candice", age: 25 },
   { name: "Tammy", age: 30 },
@@ -48,9 +51,12 @@ const people = [
 ];
 
 const adults = (arr) => {
-   //your code here...
+  return people.age > 21
 }
 
-let canConsumeTwo = adults(people)
+let canConsumeTwo 
+
 console.log(canConsumeTwo) 
-//Answer should be ['Candice', 'Tammy']
+//Answer should be ['Candice', 'Tammy'] */
+
+console.log(people.reduce(reducer, 5))
